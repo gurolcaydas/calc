@@ -2,7 +2,7 @@ var answer;
 var lastCalc;
 var toCalculate;
 var helpText =
-  "\n \n ------- \nF1 - Help! \n F2 - Last Calculation \n F4 - Last Answer \n F12 - Clear Screen \n";
+  "\n \n ------- \nF1 - Help! \n F2 - Last Calculation \n F4 - Last Answer \n F10 - Clear Screen \n";
 
 const nodeInput = document.getElementById("calcField");
 const nodeTape = document.getElementById("calcTape");
@@ -37,7 +37,7 @@ nodeInput.addEventListener("keyup", function (event) {
     case "F4": // return answer
       nodeInput.value = answer;
       break;
-    case "F12": // clear all
+    case "F10": // clear all
       nodeTape.innerHTML = "";
       nodeInput.value = "";
       break;
