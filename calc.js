@@ -28,8 +28,7 @@ nodeInput.addEventListener("keyup", function (event) {
       }
       break;
     case "F1": // help
-      nodeTape.innerHTML = helpText + "\n ------- \n" + nodeTape.innerHTML;
-      nodeInput.value = "";
+      nodeTape.innerHTML = helpText + " \n" + nodeTape.innerHTML;
       break;
     case "F2": // callback last calculation
       nodeInput.value = lastCalc;
