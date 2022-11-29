@@ -2,7 +2,9 @@ var answer;
 var lastCalc;
 var toCalculate;
 var helpText =
-  "\n \n ------- \nF1 - Help! \n F2 - Last Calculation \n F4 - Last Answer \n F10 - Clear Screen \n";
+  "\n\n ------- \n F1 - Help! \n F2 - Last Calculation \n F4 - Last Answer \n F10 - Clear Screen \n" +
+  "------- \n- * + / ^ \n sin() cos() pi \n" +
+  "------- \n& - AND \n | - OR \n\n";
 
 const nodeInput = document.getElementById("calcField");
 const nodeTape = document.getElementById("calcTape");
@@ -21,20 +23,19 @@ nodeInput.addEventListener("keyup", function (event) {
         answer = eval(toCalculate);
         nodeTape.innerHTML =
           nodeInput.value + " = " + answer + "\n" + nodeTape.innerHTML;
-
         nodeInput.value = "";
       } catch (error) {
         nodeTape.innerHTML = nodeInput.value + "\n" + nodeTape.innerHTML;
       }
       break;
     case "F1": // help
-      nodeTape.innerHTML = helpText + " \n" + nodeTape.innerHTML;
+      nodeTape.innerHTML = helpText + nodeTape.innerHTML;
       break;
     case "F2": // callback last calculation
       nodeInput.value = lastCalc;
       break;
     case "F4": // return answer
-      nodeInput.value = answer;
+      nodeInput.value = nodeInput.value + answer;
       break;
     case "F10": // clear all
       nodeTape.innerHTML = "";
