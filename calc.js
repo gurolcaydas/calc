@@ -2,13 +2,13 @@ var answer;
 var lastCalc;
 var toCalculate;
 var helpText =
-  "\n\n ------- \n F1 - Help! \n F2 - Last Calculation \n F4 - Last Answer \n F10 - Clear Screen \n" +
-  "------- \n- * + / ^ \n sin() cos() pi \n" +
-  "------- \n& - AND \n | - OR \n\n";
+  "\n\n ------- \n F1 - Help! \n F2 - Last Calculation \n F4 - Last Answer \n F10 - Clear Screen \n" +  "------- \n- * + / ^ \n sin() cos() pi \n" + "------- \n& - AND \n | - OR \n\n";
 
 const nodeInput = document.getElementById("calcField");
 const nodeTape = document.getElementById("calcTape");
 
+
+// version 0.1 - 30 Nov 2022
 nodeTape.innerHTML = helpText;
 nodeInput.addEventListener("keyup", function (event) {
   switch (event.key) {
@@ -21,8 +21,7 @@ nodeInput.addEventListener("keyup", function (event) {
       toCalculate = toCalculate.replace("pi", "Math.PI");
       try {
         answer = eval(toCalculate);
-        nodeTape.innerHTML =
-          nodeInput.value + " = " + answer + "\n" + nodeTape.innerHTML;
+        nodeTape.innerHTML = nodeInput.value + " = " + answer + "\n" + nodeTape.innerHTML;
         nodeInput.value = "";
       } catch (error) {
         nodeTape.innerHTML = nodeInput.value + "\n" + nodeTape.innerHTML;
