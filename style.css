@@ -1,6 +1,7 @@
 body {
   background-color: beige;
-  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
   margin-bottom: 50px;
   /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif; */
@@ -10,12 +11,22 @@ body {
 #calcTape,
 #calcField {
   text-align: right;
-  width: 100%;
+  padding: 10px;
   font-size: large;
   border-radius: 5px;
   border-width: 1px;
   border-color: darkgrey;
+  margin-bottom: 10px;
+  width: 100%;
+}
+#clearButton {
+  text-align: right;
+  font-size: medium;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: darkgrey;
+  padding: 10px;
 }
 #calcDiv {
-  height: 50%;
+  width: 100%;
 }

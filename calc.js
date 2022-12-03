@@ -9,6 +9,8 @@ var helpText =
 const nodeInput = document.getElementById("calcField");
 const nodeTape = document.getElementById("calcTape");
 
+// document.getElementById("calcDiv").style.height = screen.availHeight + "px";
+// document.getElementById("calcDiv").style.width = screen.availWidth + "px";
 // version 0.1 - 30 Nov 2022 OK!
 nodeTape.innerHTML = helpText;
 nodeInput.addEventListener("keyup", function (event) {
@@ -46,3 +48,7 @@ nodeInput.addEventListener("keyup", function (event) {
       break;
   }
 });
+
+function popUp() {
+  alert("Dooo");
+}
