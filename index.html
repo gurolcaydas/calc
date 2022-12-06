@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="style.css" />
   <body>
     <h1>Calc! 😍</h1>
-    <table id="tablo" style="width: 100%">
+    <table style="width: 100%">
       <tr>
-        <td style="width: 66%">
+        <td id="tablo" style="width: 66%">
           <div id="calcDiv">
             <textarea name="calcTape" id="calcTape" rows="20"></textarea>
             <input type="text" name="calcField" id="calcField" />
@@ -19,8 +19,12 @@
         </td>
         <td style="vertical-align: top">
           <div>
-            <button onclick="popUp();" id="clearButton">M -></button>
-            <div id="calcNotes"></div>
+            <button id="mButton" onclick="popUp('calcMem0');">M0</button>
+            <span id="calcMem0"></span>
+          </div>
+          <div>
+            <button id="mButton" onclick="popUp('calcMem1');">M1</button>
+            <span id="calcMem1"></span>
           </div>
         </td>
       </tr>

@@ -49,7 +49,7 @@ nodeInput.addEventListener("keyup", function (event) {
   }
 });
 
-function popUp() {
-  document.getElementById("calcNotes").innerHTML = "Oh!";
+function popUp(a) {
+  document.getElementById(a).innerHTML = answer;
   // document.querySelector("input").click();
 }

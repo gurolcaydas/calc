@@ -17,13 +17,14 @@ body {
   padding: 10px;
   margin: 10px;
 }
-#clearButton {
+#mButton {
   text-align: right;
   font-size: medium;
   border-radius: 5px;
   border-width: 1px;
   border-color: darkgrey;
-  margin-bottom: 10px;
+  margin: 10px;
+  padding: 10px;
 }
 
 #tablo {
