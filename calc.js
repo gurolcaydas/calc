@@ -53,3 +53,7 @@ function popUp(a) {
   document.getElementById(a).innerHTML = answer;
   // document.querySelector("input").click();
 }
+function geriOku(a) {
+  document.getElementById("calcField").value =
+    document.getElementById(a).innerHTML;
+}

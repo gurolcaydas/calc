@@ -7,6 +7,11 @@
     <title>Calc! 😍</title>
   </head>
   <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <!-- https://fonts.google.com/icons?icon.set=Material+Icons -->
   <body>
     <h1>Calc! 😍</h1>
     <table style="width: 100%">
@@ -20,11 +25,13 @@
         <td style="vertical-align: top">
           <div>
             <button id="mButton" onclick="popUp('calcMem0');">M0</button>
-            <span id="calcMem0"></span>
+            <span id="calcMem0"></span
+            ><button onclick="geriOku('calcMem0');">R0</button>
           </div>
           <div>
             <button id="mButton" onclick="popUp('calcMem1');">M1</button>
-            <span id="calcMem1"></span>
+            <span id="calcMem1"></span
+            ><span class="material-icons">arrow_forward</span>
           </div>
         </td>
       </tr>
