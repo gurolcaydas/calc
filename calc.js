@@ -11,7 +11,7 @@ const nodeTape = document.getElementById("calcTape");
 
 // document.getElementById("calcDiv").style.height = screen.availHeight + "px";
 // document.getElementById("calcDiv").style.width = screen.availWidth + "px";
-// version 0.1 - 30 Nov 2022 OK!!
+// version 0.1 - 6 Dec 2022
 nodeTape.innerHTML = helpText;
 nodeInput.addEventListener("keyup", function (event) {
   switch (event.key) {
@@ -50,5 +50,6 @@ nodeInput.addEventListener("keyup", function (event) {
 });
 
 function popUp() {
-  document.getElementById("calcNotes").innerHTML="Oh!";
+  document.getElementById("calcNotes").innerHTML = "Oh!";
+  // document.querySelector("input").click();
 }

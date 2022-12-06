@@ -8,18 +8,23 @@
   </head>
   <link rel="stylesheet" href="style.css" />
   <body>
-    <div id="calcDiv">
-      <h1>Calc! 😍</h1>
-      <textarea name="calcTape" id="calcTape" rows="30"></textarea>
-      <input type="text" name="calcField" id="calcField" />
-      <div>
-        <button onclick="popUp();" id="clearButton">Test</button>
-      </div>
-      <div id="calcNotes">
-
-      </div>
-    </div>
-
+    <h1>Calc! 😍</h1>
+    <table id="tablo" style="width: 100%">
+      <tr>
+        <td style="width: 66%">
+          <div id="calcDiv">
+            <textarea name="calcTape" id="calcTape" rows="20"></textarea>
+            <input type="text" name="calcField" id="calcField" />
+          </div>
+        </td>
+        <td style="vertical-align: top">
+          <div>
+            <button onclick="popUp();" id="clearButton">M -></button>
+            <div id="calcNotes"></div>
+          </div>
+        </td>
+      </tr>
+    </table>
     <script src="calc.js"></script>
   </body>
 </html>

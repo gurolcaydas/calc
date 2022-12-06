@@ -1,8 +1,5 @@
 body {
   background-color: beige;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-bottom: 50px;
   /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif; */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
@@ -11,13 +8,14 @@ body {
 #calcTape,
 #calcField {
   text-align: right;
-  padding: 10px;
   font-size: large;
   border-radius: 5px;
   border-width: 1px;
   border-color: darkgrey;
   margin-bottom: 10px;
-  width: 100%;
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
 }
 #clearButton {
   text-align: right;
@@ -25,8 +23,11 @@ body {
   border-radius: 5px;
   border-width: 1px;
   border-color: darkgrey;
-  padding: 10px;
+  margin-bottom: 10px;
 }
-#calcDiv {
-  width: 100%;
+
+#tablo {
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: darkgrey;
 }
