@@ -5,12 +5,22 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
-#calcTape,
-#calcField {
+#calcMem {
   text-align: right;
   font-size: large;
-  border-radius: 5px;
   border-width: 1px;
+  border-color: darkgrey;
+  margin-bottom: 10px;
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+}
+#calcField {
+  background-color: beige;
+  text-align: right;
+  font-size: large;
+  border-width: 1px;
+  border-radius: 5px;
   border-color: darkgrey;
   margin-bottom: 10px;
   width: 90%;
@@ -31,4 +41,7 @@ button {
   border-radius: 5px;
   border-width: 1px;
   border-color: darkgrey;
+}
+.copy {
+  cursor: copy;
 }
