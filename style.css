@@ -12,6 +12,12 @@ body {
   border-width: 0px;
   width: 100%;
 }
+#infoLine {
+  text-align: right;
+  font-size: small;
+  border-width: 0px;
+  width: 100%;
+}
 #calcField {
   background-color: beige;
   text-align: right;
@@ -30,6 +36,12 @@ button {
   border-color: darkgrey;
   margin: 10px;
   padding: 10px;
+}
+.textRed {
+  color: red;
+}
+.textIcon {
+  margin-left: 20px;
 }
 .copy {
   /* mouse pointer */

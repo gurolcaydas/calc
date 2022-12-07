@@ -9,6 +9,7 @@ var helpText =
 
 const nodeInput = document.getElementById("calcField");
 const nodeMemory = document.getElementById("calcMem");
+const nodeInfoLine = document.getElementById("infoLine");
 
 // document.getElementById("calcDiv").style.height = screen.availHeight + "px";
 // document.getElementById("calcDiv").style.width = screen.availWidth + "px";
@@ -34,13 +35,21 @@ window.addEventListener("keyup", function (event) {
             nodeInput.value +
             " = " +
             answer +
-            "<span class='copy material-icons' style='margin-left:20px;' onclick='geriOku2(" +
+            "<span class='copy material-icons textRed' style='margin-left:20px;' onclick='geriOku2(" +
             answer +
             ");'>copy_all</span><br>" +
             nodeMemory.innerHTML;
         } catch (error) {
           nodeMemory.innerHTML =
             nodeInput.value + "<br>" + nodeMemory.innerHTML;
+          switch (lastCalc.toLowerCase()) {
+            case "komut":
+              nodeInfoLine.innerHTML = "Komut";
+              break;
+
+            default:
+              break;
+          }
         }
         nodeInput.value = "";
       }
