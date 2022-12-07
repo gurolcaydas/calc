@@ -16,23 +16,10 @@
     <h1>Calc! 😍</h1>
     <table style="width: 100%">
       <tr>
-        <td id="tablo" style="width: 66%">
-          <div id="calcDiv">
-            <textarea name="calcTape" id="calcTape" rows="20"></textarea>
-            <input type="text" name="calcField" id="calcField" />
-          </div>
-        </td>
         <td style="vertical-align: top">
-          <div>
-            <button id="mButton" onclick="popUp('calcMem0');">M0</button>
-            <span id="calcMem0"></span
-            ><button onclick="geriOku('calcMem0');">R0</button>
-          </div>
-          <div>
-            <button id="mButton" onclick="popUp('calcMem1');">M1</button>
-            <span id="calcMem1"></span
-            ><span class="material-icons">arrow_forward</span>
-          </div>
+          <input type="text" name="calcField" id="calcField" />
+
+          <div id="calcMem"></div>
         </td>
       </tr>
     </table>
