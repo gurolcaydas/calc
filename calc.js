@@ -2,15 +2,16 @@ var answer;
 var lastCalc;
 var toCalculate;
 var helpText =
-  "<br><br> ------- <br> F1 - Help! <br> Up - Last Calculation <br> Down - Last Answer <br> F10 - Clear Screen <br>" +
+  "<br><br> ------- <br> ? - Help! <br> Up - Last Calculation <br> Down - Last Answer <br> ESC - Clear Screen <br>" +
   "Any key - Focus to Input <br>" +
+  "Click on any number - Call back <br>" +
   "------- <br>- * + / ^ <br> sin() cos() pi <br>" +
   "------- <br>& - AND <br> | - OR <br><br>";
 
 const nodeInput = document.getElementById("calcField");
 const nodeMemory = document.getElementById("calcMem");
 const nodeInfoLine = document.getElementById("infoLine");
-
+nodeInput.focus();
 // document.getElementById("calcDiv").style.height = screen.availHeight + "px";
 // document.getElementById("calcDiv").style.width = screen.availWidth + "px";
 // version 0.1 - 6 Dec 2022
@@ -22,6 +23,7 @@ window.addEventListener("keyup", function (event) {
 
   switch (event.key) {
     case "Enter": // pressing enter does the job
+      // case "=":
       lastCalc = nodeInput.value;
       if (lastCalc !== "") {
         toCalculate = lastCalc;
@@ -32,12 +34,17 @@ window.addEventListener("keyup", function (event) {
         try {
           answer = eval(toCalculate);
           nodeMemory.innerHTML =
-            nodeInput.value +
+            "<span class='copy textGrey' style='margin-left:20px;' onclick='geriOku(`" +
+            lastCalc +
+            "`);'>" +
+            lastCalc +
             " = " +
+            "</span> " +
+            "<span class='copy textBrown' style='margin-left:10px; font-size:1.2em;' onclick='geriOku(" +
             answer +
-            "<span class='copy material-icons textRed' style='margin-left:20px;' onclick='geriOku2(" +
+            ");'> " +
             answer +
-            ");'>copy_all</span><br>" +
+            "</span><br>" +
             nodeMemory.innerHTML;
         } catch (error) {
           nodeMemory.innerHTML =
@@ -54,8 +61,9 @@ window.addEventListener("keyup", function (event) {
         nodeInput.value = "";
       }
       break;
-    case "F1": // help
+    case "?": // help
       nodeMemory.innerHTML = helpText + nodeMemory.innerHTML;
+      nodeInput.value = "";
       break;
     case "Up": // callback last calculation
     case "ArrowUp": // callback last calculation
@@ -65,7 +73,7 @@ window.addEventListener("keyup", function (event) {
     case "ArrowDown": //  return answer
       nodeInput.value = nodeInput.value + answer;
       break;
-    case "F10": // clear all
+    case "Escape": // clear all
       nodeMemory.innerHTML = "";
       nodeInput.value = "";
       break;
@@ -76,6 +84,7 @@ window.addEventListener("keyup", function (event) {
 
 // document.querySelector("input").click();
 
-function geriOku2(a) {
-  document.getElementById("calcField").value = a;
+function geriOku(a) {
+  nodeInput.value = a;
+  nodeInput.focus();
 }
