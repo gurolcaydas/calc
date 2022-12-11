@@ -1,64 +1,64 @@
 body {
-  background-color: beige;
-  /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    background-color: beige;
+    /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif; */
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; */
-  font-family: Space Mono;
-  margin: 40px;
+    font-family: Space Mono;
+    margin: 40px;
 }
 table {
-  width: 100%;
-  text-align: left;
+    width: 100%;
+    text-align: left;
 }
 td {
-  padding-left: 50px;
-  vertical-align: top;
+    padding-left: 50px;
+    vertical-align: top;
 }
 #calcMem {
-  text-align: right;
-  font-size: large;
-  border-width: 0px;
-  width: 100%;
+    text-align: right;
+    font-size: large;
+    border-width: 0px;
+    width: 100%;
 }
 #infoLine {
-  text-align: right;
-  font-size: small;
-  border-width: 0px;
-  width: 100%;
-  margin-bottom: 20px;
+    text-align: right;
+    font-size: small;
+    border-width: 0px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 #calcField {
-  background-color: beige;
-  text-align: right;
-  font-size: large;
-  outline: 0;
-  border-width: 0 0 1px;
-  border-color: darkgrey;
-  margin-bottom: 10px;
-  width: 100%;
-  font-family: Space Mono;
+    background-color: beige;
+    text-align: right;
+    font-size: large;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: gray;
+    margin-bottom: 10px;
+    width: 100%;
+    font-family: Space Mono;
 }
 
 .textRed {
-  color: red;
+    color: red;
 }
 .textGrey {
-  color: darkgray;
+    color: darkgray;
 }
 .textBrown {
-  color: brown;
+    color: brown;
 }
 .textBlue {
-  color: blue;
+    color: blue;
 }
 .textIcon {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 .copy {
-  /* mouse pointer */
-  cursor: copy;
+    /* mouse pointer */
+    cursor: copy;
 }
 .mini {
-  font-size: x-small;
+    font-size: x-small;
 }
