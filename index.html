@@ -1,30 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Calc! 😍</title>
-   </head>
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Calc! 😍</title>
    <link rel="stylesheet" href="style.css" />
-   <link
-      href="https://fonts.googleapis.com/icon?family=Space+Mono"
-      rel="stylesheet"
-   />
-   <!-- https://fonts.google.com/icons?icon.set=Material+Icons -->
-   <body>
-      <div>
-         <h1>Calc! 😍</h1>
-         <input
-            placeholder="Type to Calc!"
-            type="text"
-            name="calcField"
-            id="calcField"
-         />
-         <div id="infoLine">v0.1</div>
-         <div id="calcMem"></div>
-      </div>
-      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-      <script src="calc2.js"></script>
-   </body>
+   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <main class="calculator-root">
+      <header class="calc-header">
+         <h1>Calc</h1>
+         <div class="version">v1.01</div>
+      </header>
+
+      <section class="calc-card">
+         <div class="card-left">
+            <div class="display-area">
+               <div class="display-wrapper">
+                  <input id="calcField" class="display" type="text" inputmode="text" autocomplete="off"
+                     aria-label="Calculator display" />
+                  <span class="result-badge" aria-hidden="true">Ans</span>
+               </div>
+            </div>
+
+            <div class="buttons">
+               <button type="button" class="btn function" data-action="clear">C</button>
+               <button type="button" class="btn function" data-action="back">⌫</button>
+               <button type="button" class="btn function" data-action="percent">%</button>
+               <button type="button" class="btn operator" data-value="/">÷</button>
+
+               <button type="button" class="btn" data-value="7">7</button>
+               <button type="button" class="btn" data-value="8">8</button>
+               <button type="button" class="btn" data-value="9">9</button>
+               <button type="button" class="btn operator" data-value="*">×</button>
+
+               <button type="button" class="btn" data-value="4">4</button>
+               <button type="button" class="btn" data-value="5">5</button>
+               <button type="button" class="btn" data-value="6">6</button>
+               <button type="button" class="btn operator" data-value="-">−</button>
+
+               <button type="button" class="btn" data-value="1">1</button>
+               <button type="button" class="btn" data-value="2">2</button>
+               <button type="button" class="btn" data-value="3">3</button>
+               <button type="button" class="btn operator" data-value="+">+</button>
+
+               <button type="button" class="btn function" data-action="neg">+/-</button>
+               <button type="button" class="btn" data-value="0">0</button>
+               <button type="button" class="btn" data-value=".">.</button>
+               <button type="button" class="btn equals" data-action="equals">=</button>
+
+               <button type="button" class="btn small" data-action="sqrt">√</button>
+               <button type="button" class="btn small" data-action="pow">xʸ</button>
+               <button type="button" class="btn small" data-action="recip">1/x</button>
+               <button type="button" class="btn small" data-action="ans">Ans</button>
+
+               <button type="button" class="btn small" data-action="int">int</button>
+               <button type="button" class="btn small" data-action="fix2">fix2</button>
+               <button type="button" class="btn small" data-action="abs">abs</button>
+               <button type="button" class="btn small" data-action="round">round</button>
+            </div>
+         </div>
+         <aside class="card-right">
+            <div id="calcMem" class="history" aria-live="polite"></div>
+         </aside>
+      </section>
+      <footer class="hint">Tip: type and press Enter, or use buttons.</footer>
+   </main>
+
+   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+   <script src="calc2.js"></script>
+</body>
+
 </html>

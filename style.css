@@ -1,64 +1,120 @@
-body {
-    background-color: beige;
-    /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif; */
-    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; */
-    font-family: Space Mono;
-    margin: 40px;
+:root{
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --accent: #2b6cb0;
+    --muted: #6b7280;
+    --btn: #f1f5f9;
+    --danger: #ef4444;
 }
-table {
-    width: 100%;
-    text-align: left;
+html,body{height:100%;}
+body{
+    background: linear-gradient(180deg,#e6eefc 0%,var(--bg) 100%);
+    font-family: 'Space Mono', monospace;
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:32px;
+    color:#111827;
 }
-td {
-    padding-left: 50px;
-    vertical-align: top;
+.calculator-root{
+    width:100%;
+    max-width:720px;
 }
-#calcMem {
-    text-align: right;
-    font-size: large;
-    border-width: 0px;
-    width: 100%;
+.calc-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;
 }
-#infoLine {
-    text-align: right;
-    font-size: small;
-    border-width: 0px;
-    width: 100%;
-    margin-bottom: 20px;
+.calc-header h1{margin:0;font-size:1.1rem}
+.calc-header .version{color:var(--muted);font-size:0.85rem}
+.calc-card{
+    background:var(--card);
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(15,23,42,0.08);
+    padding:16px;
+    display:grid;
+    grid-template-columns: 1fr 240px;
+    gap:12px;
+    align-items:start;
 }
-#calcField {
-    background-color: beige;
-    text-align: right;
-    font-size: large;
-    outline: 0;
-    border-width: 0 0 1px;
-    border-color: gray;
-    margin-bottom: 10px;
-    width: 100%;
-    font-family: Space Mono;
+.card-left{display:flex;flex-direction:column}
+.display-area{margin-bottom:12px}
+.display-wrapper{position:relative}
+.result-badge{
+    display:none;
+    position:absolute;
+    right:8px;
+    top:8px;
+    background:var(--accent);
+    color:white;
+    font-size:0.7rem;
+    padding:2px 6px;
+    border-radius:999px;
+    line-height:1;
 }
+.display-wrapper.computed .result-badge{display:inline-block}
+.display-wrapper.computed .display{opacity:0.92}
+.history{
+    min-height:120px;
+    color:var(--muted);
+    font-size:0.9rem;
+    text-align:right;
+    padding:8px;
+    overflow:auto;
+    border-left:1px solid #eef2f7;
+}
+.display{
+    width:100%;
+    box-sizing:border-box;
+    font-size:2rem;
+    padding:10px 12px;
+    text-align:right;
+    border:0;
+    outline:0;
+    background:transparent;
+}
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+    grid-auto-rows:56px;
+}
+.btn{
+    background:var(--btn);
+    border:0;
+    padding:0 8px;
+    border-radius:8px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:transform .06s ease, box-shadow .06s ease;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:44px;
+}
+.btn:active{transform:translateY(1px)}
+.btn.operator{background:#e6f0ff;color:var(--accent);font-weight:700}
+.btn.equals{grid-column:4 / 5;background:var(--accent);color:white;font-weight:700}
+.btn.function{background:#fff4e6}
+.btn.small{font-size:0.95rem;padding:6px}
+.hint{margin-top:8px;color:var(--muted);font-size:0.85rem;text-align:center}
 
-.textRed {
-    color: red;
-}
-.textGrey {
-    color: darkgray;
-}
-.textBrown {
-    color: brown;
-}
-.textBlue {
-    color: blue;
-}
-.textIcon {
-    margin-left: 20px;
-}
-.copy {
-    /* mouse pointer */
-    cursor: copy;
-}
-.mini {
-    font-size: x-small;
+/* legacy classes used by JS output */
+.textRed{color:var(--danger)}
+.textGrey{color:var(--muted)}
+.textBrown{color:#8b5e3c}
+.textBlue{color:var(--accent)}
+.copy{cursor:copy}
+.mini{font-size:x-small}
+
+@media (max-width:720px){
+    .calc-card{grid-template-columns:1fr;}
+    .card-right{order:2}
+    .card-left{order:1}
+    .history{min-height:80px}
+    .buttons{grid-auto-rows:48px}
+    .btn{font-size:0.98rem}
 }
